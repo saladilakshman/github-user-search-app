@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.input {
+  @apply w-full  rounded-lg dark:bg-slate-800 bg-white shadow-lg focus:outline-none  h-14 pl-12 dark:caret-white placeholder:lg:text-xl placeholder:dark:text-white placeholder:font-mono text-white placeholder:text-black caret-black dark:shadow-none shadow-blue-100 placeholder:text-base;
+}
+.search-button {
+  @apply bg-blue-500 rounded-lg lg:px-6 py-2 lg:text-lg text-white font-semibold absolute right-2 lg:top-[0.4rem] px-4 text-xs top-3;
+}
