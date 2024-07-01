@@ -157,7 +157,7 @@ function App() {
                   className="md:size-28 rounded-full size-16"
                 />
               </div>
-              <div className="flex flex-col flex-wrap justify-between items-baseline  gap-8  text-wrap  lg:pr-12 dark:text-white text-gray-900">
+              <div className="flex flex-col flex-wrap justify-between items-baseline  gap-8  text-wrap  lg:pr-20 pr-2 dark:text-white text-gray-900">
                 <div className="flex flex-wrap justify-between w-3/4">
                   <div className="flex flex-col  justify-enter items-baseline gap-2 md:gap-4 pb-8">
                     <h1 className=" text-sm md:text-3xl  font-semibold">
@@ -184,31 +184,32 @@ function App() {
                     </h2>
                   </div>
                 </div>
-
-                <div className="flex justify-start items-center md:gap-8 gap-6 text-white dark:bg-stone-900 px-4  md:w-[30rem]  rounded-lg py-2 capitalize bg-sky-900 w-[95%] overflow-x-hidden">
-                  <h2 className=" text-sm md:text-lg">
-                    Repos
-                    <br />
-                    <span className="text-base md:text-xl font-semibold">
-                      {public_repos}
-                    </span>
-                  </h2>
-                  <h2 className="text-sm md:text-lg">
-                    followers
-                    <br />
-                    <span className=" text-base md:text-xl font-semibold">
-                      {followers}
-                    </span>
-                  </h2>
-                  <h2 className="text-sm md:text-lg">
-                    following
-                    <br />
-                    <span className="text-base md:text-xl font-semibold">
-                      {following}
-                    </span>
-                  </h2>
+                <div className="max-sm:pr-6">
+                  <div className="flex justify-start items-center md:gap-8 gap-6 text-white dark:bg-stone-900 lg:px-10 rounded-lg py-2 capitalize bg-sky-900 w-[95%] pr-4 pl-2 ">
+                    <h2 className=" text-sm md:text-lg">
+                      Repos
+                      <br />
+                      <span className="text-base md:text-xl font-semibold">
+                        {public_repos}
+                      </span>
+                    </h2>
+                    <h2 className="text-sm md:text-lg">
+                      followers
+                      <br />
+                      <span className=" text-base md:text-xl font-semibold">
+                        {followers}
+                      </span>
+                    </h2>
+                    <h2 className="text-sm md:text-lg">
+                      following
+                      <br />
+                      <span className="text-base md:text-xl font-semibold">
+                        {following}
+                      </span>
+                    </h2>
+                  </div>
                 </div>
-                <div className="grid grid-cols-2  gap-x-2 md:gap-x-10 gap-y-4 py-8">
+                <div className="grid grid-cols-2  gap-x-2 md:gap-x-10 gap-y-4 py-8  max-sm:mr-10 truncate">
                   {Marker.map((list, index) => {
                     return (
                       <div
