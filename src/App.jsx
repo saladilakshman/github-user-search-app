@@ -91,12 +91,12 @@ function App() {
     login,
   } = userdetails;
   const Marker = markerList(location, twitter_username, blog, company);
-  // useEffect(() => {
-  //   const listItems = document.querySelectorAll(".list-items");
-  //   listItems[2].addEventListener("click", () => {
-  //     window.location.href = html_url;
-  //   });
-  // }, [html_url]);
+  useEffect(() => {
+    const listItems = document.querySelectorAll(".list-items");
+    listItems[2].addEventListener("click", () => {
+      window.location.href = html_url;
+    });
+  }, [html_url]);
   return (
     <main className={`${isdarkmode && "dark"}`}>
       <div className="dark:bg-slate-900 bg-slate-100 font-mono dark:text-white h-screen transition-all">
@@ -131,7 +131,7 @@ function App() {
             <input
               type="text"
               value={username}
-              onChange={(e) => setUsername(e.target.value.trim())}
+              onChange={(e) => setUsername(e.target.value.trim().toLowerCase())}
               placeholder="Search username"
               className="input"
             />
@@ -149,7 +149,7 @@ function App() {
           </div>
           {/**Profile component */}
           <div className=" bg-white shadow-lg  dark:shadow-none shadow-blue-100 dark:bg-slate-800 rounded-lg pr-10 py-8 ">
-            <div className="grid grid-cols-3 gap-2 place-items-center">
+            <div className="grid grid-cols-2 gap-2 place-items-center">
               <div className=" h-full  md:w-2/3 w-full max-sm:pl-2">
                 <img
                   src={avatar_url}
@@ -157,9 +157,9 @@ function App() {
                   className="md:size-28 rounded-full size-16"
                 />
               </div>
-              <div className="flex flex-col flex-wrap justify-between items-baseline  gap-8 col-span-2 text-wrap  lg:pr-12 dark:text-white text-gray-900">
+              <div className="flex flex-col flex-wrap justify-between items-baseline  gap-8  text-wrap  lg:pr-12 dark:text-white text-gray-900">
                 <div className="flex flex-wrap justify-between w-3/4">
-                  <div className="flex flex-col   gap-2 md:gap-4 pb-8">
+                  <div className="flex flex-col  justify-enter items-baseline gap-2 md:gap-4 pb-8">
                     <h1 className=" text-sm md:text-3xl  font-semibold">
                       {name}
                     </h1>
@@ -185,7 +185,7 @@ function App() {
                   </div>
                 </div>
 
-                <div className="flex justify-between items-center md:gap-8 gap-6 text-white dark:bg-stone-900 px-10  md:w-[35rem] w-11/12 rounded-lg py-2 capitalize bg-sky-900">
+                <div className="flex justify-start items-center md:gap-8 gap-6 text-white dark:bg-stone-900 px-4  md:w-[30rem]  rounded-lg py-2 capitalize bg-sky-900 w-[95%] overflow-x-hidden">
                   <h2 className=" text-sm md:text-lg">
                     Repos
                     <br />
